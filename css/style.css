@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Bright_orange: hsl(31, 77%, 52%);
+    --Dark_cyan: hsl(184, 100%, 22%);
+    --Very_dark_cyan: hsl(179, 100%, 13%);
+    --body_font_family: 'Big Shoulders Display', cursive;
+    --para_font_family: 'Lexend Deca', sans-serif;
+    --para:hsla(0, 0%, 100%, 0.75);
+}
+
+
+body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+  font-family: var(--para_font_family);
+}
+
+
+.card {
+    display: flex;
+    max-width: 900px;
+}
+
+.card_sadans {
+    background-color: var(--Bright_orange);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.card_suvs {
+    background-color: var(--Dark_cyan);
+}
+
+.card_luxury {
+    background-color: var(--Very_dark_cyan);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.card_child {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 40px;
+    align-items:flex-start;
+}
+
+.card_child1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.card_child1 h1 {
+    font-family: var(--body_font_family);
+    color: var(--para);
+}
+
+.card_child1 p {
+    color: var(--para);
+    font-size: 1rem;
+}
+
+#learn_more {
+    background-color: var(--para);
+    color: var(--Dark_cyan);
+    padding: .8rem 1rem;
+    border-radius: 30px;
+    border: none;
+}
+
+.card_sadans > #learn_more {
+    color: var(--Bright_orange);
+}
+
+@media (max-width:768px){
+    .card {
+        flex-direction: column;
+        width: 100%;
+        padding: 30px;
+    }
+
+    .card_sadans {
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+    }
+    .card_luxury {
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 10px;
+    }
+}
